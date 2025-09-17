@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <Windows.h>
 
 std::string int_in_string(int num) {
 	std::string str;
@@ -8,34 +9,37 @@ std::string int_in_string(int num) {
 	if (abs(num) < 20) {
 		switch (abs(num)) {
 		case 19:
-			str = str + "девятнадцать";
+			str = str + "девятнадцать ";
 			break;
 		case 18:
-			str = str + "восемнадцать";
+			str = str + "восемнадцать ";
 			break;
 		case 17:
-			str = str + "семнадцать";
+			str = str + "семнадцать ";
 			break;
 		case 16:
-			str = str + "шестнадцать";
+			str = str + "шестнадцать ";
 			break;
 		case 15:
-			str = str + "пятнадцать";
+			str = str + "пятнадцать ";
 			break;
 		case 14:
-			str = str + "четырнадцать";
+			str = str + "четырнадцать ";
 			break;
 		case 13:
-			str = str + "тренадцать";
+			str = str + "тринадцать ";
 			break;
 		case 12:
-			str = str + "двенадцать";
+			str = str + "двенадцать ";
 			break;
 		case 11:
-			str = str + "одинадцать";
+			str = str + "одинадцать ";
 			break;
 		case 10:
-			str = str + "десять";
+			str = str + "десять ";
+			break;
+		case 0:
+			str = str + "ноль ";
 			break;
 		};
 	}
@@ -67,7 +71,7 @@ std::string int_in_string(int num) {
 			break;
 
 		};
-	if ((num > 20) || (num < 10)) {
+	if ((abs(num) > 20) || (abs(num) < 10)) {
 		switch (abs(num % 10)) {
 		case 9:
 			str = str + "девять ";
@@ -102,6 +106,8 @@ std::string int_in_string(int num) {
 }
 
 int main() {
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
 	setlocale(LC_ALL, "RU");
 	int a, b;
 
@@ -111,8 +117,8 @@ int main() {
 	std::cin >> b;
 
 	if ((a < 100) && (a > -100) && (b < 100) && (b > -100)) {
-		if (a > b) { std::cout << int_in_string(a) << " больше " << int_in_string(b) << "\n"; }
-		else if (a < b){ std::cout << int_in_string(a) << " меньше " << int_in_string(b) << "\n"; }
+		if (a > b) { std::cout << int_in_string(a) << " больше чем " << int_in_string(b) << "\n"; }
+		else if (a < b){ std::cout << int_in_string(a) << " меньше чем " << int_in_string(b) << "\n"; }
 			else std::cout << int_in_string(a) << " равно " << int_in_string(b) << "\n";
 	}
 	else std::cout << "Ошибка! Одно из чисел вне диапазона! \n";
