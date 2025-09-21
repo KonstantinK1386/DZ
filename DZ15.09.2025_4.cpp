@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <Windows.h>
 
@@ -108,7 +108,7 @@ std::string int_in_string(int num) {
 int main() {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-	setlocale(LC_ALL, "Russia");
+	setlocale(LC_ALL, "RU");
 	int a, b;
 
 	std::cout << "Введите целое число : ";
