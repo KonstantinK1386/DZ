@@ -4,101 +4,101 @@
 
 std::string int_in_string(int num) {
 	std::string str;
-	if (num < 0) str = "ìèíóñ ";
+	if (num < 0) str = "Ğ¼Ğ¸Ğ½ÑƒÑ ";
 	else str = " ";
 	if (abs(num) < 20) {
 		switch (abs(num)) {
 		case 19:
-			str = str + "äåâÿòíàäöàòü ";
+			str = str + "Ğ´ĞµĞ²ÑÑ‚Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 18:
-			str = str + "âîñåìíàäöàòü ";
+			str = str + "Ğ²Ğ¾ÑĞµĞ¼Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 17:
-			str = str + "ñåìíàäöàòü ";
+			str = str + "ÑĞµĞ¼Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 16:
-			str = str + "øåñòíàäöàòü ";
+			str = str + "ÑˆĞµÑÑ‚Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 15:
-			str = str + "ïÿòíàäöàòü ";
+			str = str + "Ğ¿ÑÑ‚Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 14:
-			str = str + "÷åòûğíàäöàòü ";
+			str = str + "Ñ‡ĞµÑ‚Ñ‹Ñ€Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 13:
-			str = str + "òğèíàäöàòü ";
+			str = str + "Ñ‚Ñ€Ğ¸Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 12:
-			str = str + "äâåíàäöàòü ";
+			str = str + "Ğ´Ğ²ĞµĞ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 11:
-			str = str + "îäèíàäöàòü ";
+			str = str + "Ğ¾Ğ´Ğ¸Ğ½Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 10:
-			str = str + "äåñÿòü ";
+			str = str + "Ğ´ĞµÑÑÑ‚ÑŒ ";
 			break;
 		case 0:
-			str = str + "íîëü ";
+			str = str + "Ğ½Ğ¾Ğ»ÑŒ ";
 			break;
 		};
 	}
 	else
 		switch (abs(num / 10)) {
 		case 9:
-			str = str + "äåâÿíîñòî ";
+			str = str + "Ğ´ĞµĞ²ÑĞ½Ğ¾ÑÑ‚Ğ¾ ";
 			break;
 		case 8:
-			str = str + "âîñåìäåñÿò ";
+			str = str + "Ğ²Ğ¾ÑĞµĞ¼ÑŒĞ´ĞµÑÑÑ‚ ";
 			break;
 		case 7:
-			str = str + "ñåìüäåñÿò ";
+			str = str + "ÑĞµĞ¼Ğ´ĞµÑÑÑ‚ ";
 			break;
 		case 6:
-			str = str + "øåñòäåñÿò ";
+			str = str + "ÑˆĞµÑÑ‚Ğ´ĞµÑÑÑ‚ ";
 			break;
 		case 5:
-			str = str + "ïÿòüäåñÿò ";
+			str = str + "Ğ¿ÑÑ‚ÑŒĞ´ĞµÑÑÑ‚ ";
 			break;
 		case 4:
-			str = str + "ñîğîê ";
+			str = str + "ÑĞ¾Ñ€Ğ¾Ğº ";
 			break;
 		case 3:
-			str = str + "òğèäöàòü ";
+			str = str + "Ñ‚Ñ€Ğ¸Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 		case 2:
-			str = str + "äâàäöàòü ";
+			str = str + "Ğ´Ğ²Ğ°Ğ´Ñ†Ğ°Ñ‚ÑŒ ";
 			break;
 
 		};
 	if ((abs(num) > 20) || (abs(num) < 10)) {
 		switch (abs(num % 10)) {
 		case 9:
-			str = str + "äåâÿòü ";
+			str = str + "Ğ´ĞµĞ²ÑÑ‚ÑŒ ";
 			break;
 		case 8:
-			str = str + "âîñåìü ";
+			str = str + "Ğ²Ğ¾ÑĞµĞ¼ÑŒ ";
 			break;
 		case 7:
-			str = str + "ñåìü ";
+			str = str + "ÑĞµĞ¼ÑŒ ";
 			break;
 		case 6:
-			str = str + "øåñòü ";
+			str = str + "ÑˆĞµÑÑ‚ÑŒ ";
 			break;
 		case 5:
-			str = str + "ïÿòü ";
+			str = str + "Ğ¿ÑÑ‚ÑŒ ";
 			break;
 		case 4:
-			str = str + "÷åòûğå ";
+			str = str + "Ñ‡ĞµÑ‚Ñ‹Ñ€Ğµ ";
 			break;
 		case 3:
-			str = str + "òğè ";
+			str = str + "Ñ‚Ñ€Ğ¸ ";
 			break;
 		case 2:
-			str = str + "äâà ";
+			str = str + "Ğ´Ğ²Ğ° ";
 			break;
 		case 1:
-			str = str + "îäèí";
+			str = str + "Ğ¾Ğ´Ğ¸Ğ½ ";
 			break;
 		};
 	};
@@ -108,20 +108,20 @@ std::string int_in_string(int num) {
 int main() {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-	setlocale(LC_ALL, "RU");
+	setlocale(LC_ALL, "Russia");
 	int a, b;
 
-	std::cout << "Ââåäèòå öåëîå ÷èñëî : ";
+	std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ : ";
 	std::cin >> a;
-	std::cout << "Ââåäèòå öåëîå ÷èñëî : ";
+	std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ : ";
 	std::cin >> b;
 
 	if ((a < 100) && (a > -100) && (b < 100) && (b > -100)) {
-		if (a > b) { std::cout << int_in_string(a) << " áîëüøå ÷åì " << int_in_string(b) << "\n"; }
-		else if (a < b){ std::cout << int_in_string(a) << " ìåíüøå ÷åì " << int_in_string(b) << "\n"; }
-			else std::cout << int_in_string(a) << " ğàâíî " << int_in_string(b) << "\n";
+		if (a > b) { std::cout << int_in_string(a) << " Ğ±Ğ¾Ğ»ÑŒÑˆĞµ Ñ‡ĞµĞ¼ " << int_in_string(b) << "\n"; }
+		else if (a < b){ std::cout << int_in_string(a) << " Ğ¼ĞµĞ½ÑŒÑˆĞµ Ñ‡ĞµĞ¼ " << int_in_string(b) << "\n"; }
+			else std::cout << int_in_string(a) << " Ñ€Ğ°Ğ²Ğ½Ğ¾ " << int_in_string(b) << "\n";
 	}
-	else std::cout << "Îøèáêà! Îäíî èç ÷èñåë âíå äèàïàçîíà! \n";
+	else std::cout << "ĞÑˆĞ¸Ğ±ĞºĞ°! ĞĞ´Ğ½Ğ¾ Ğ¸Ğ· Ñ‡Ğ¸ÑĞµĞ» Ğ²Ğ½Ğµ Ğ´Ğ¸Ğ°Ğ¿Ğ°Ğ·Ğ¾Ğ½Ğ°! \n";
 
 	return 0;
 }
