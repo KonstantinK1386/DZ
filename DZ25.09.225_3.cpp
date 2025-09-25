@@ -1,8 +1,8 @@
 #include <iostream>
 #include <Windows.h>
 
-void numb_fibonachchi(int num, long long int a, long long int b) {
-	long long int temp;
+void numb_fibonachchi(int num, unsigned long int a, unsigned long int b) { // начало функции перечисления чисел Фибоначчи
+	unsigned long int temp; // формат unsigned long int - только целые длинное целое число позволяет хранитт 80 число Фибоначчи
 
 	temp = a;
 	a = b;
@@ -11,7 +11,7 @@ void numb_fibonachchi(int num, long long int a, long long int b) {
 	num = num - 1;
 	if (num > 0) {
 		std::cout << ", ";
-		numb_fibonachchi(num, a, b);
+		numb_fibonachchi(num, a, b); // вызов функции из функции (рекурсия)
 	}
 
 }
@@ -23,9 +23,9 @@ int main() {
 
 	int num;
 	std::cout << "Введите число : ";
-	std::cin >> num;
+	std::cin >> num; // ввод колличество выводимых чисел Фибоначчи
 	std::cout << "Числа Фибоначи : 0, 1, ";
-	numb_fibonachchi(num - 2, 0, 1);
+	numb_fibonachchi(num - 2, 0, 1); // вызов функции вывода чисел Фибоначчи
 	std::cout << '\n';
 
 	return 0;
