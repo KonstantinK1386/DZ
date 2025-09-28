@@ -1,8 +1,8 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <Windows.h>
 
-void numb_fibonachchi(unsigned int num, unsigned long long int a, unsigned long long int b) { // начало функции перечисления чисел Фибоначчи
-	unsigned long long int temp; // формат unsigned long int - только целые длинное целое число позволяет хранитт 80 число Фибоначчи
+void numb_fibonachchi(unsigned int num, unsigned long long int a, unsigned long long int b) { // С‚РµР»Рѕ С„СѓРЅРєС†РёРё РїРѕСЃС‡С‘С‚Р° Рё РІС‹РІРѕРґР° С‡РёСЃРµР» Р¤РёР±РѕРЅР°С‡С‡Рё
+	unsigned long long int temp; // РІРёРґ unsigned long long int - РїРѕР·РІРѕР»СЏРµС‚ СЃС‡РёС‚Р°С‚СЊ Рё РІС‹РІРѕРґРёС‚СЊ С‡РёСЃР»Р° Р¤РёР±РѕРЅР°С‡С‡Рё РґРѕ  80 Рё Р±РѕР»СЊС€Рµ
 
 	temp = a;
 	a = b;
@@ -11,7 +11,7 @@ void numb_fibonachchi(unsigned int num, unsigned long long int a, unsigned long 
 	num = num - 1;
 	if (num > 0) {
 		std::cout << ", ";
-		numb_fibonachchi(num, a, b); // вызов функции из функции (рекурсия)
+		numb_fibonachchi(num, a, b); // РїРѕРІС‚РѕСЂРЅС‹Р№ РІС‹Р·РѕРІ С„СѓРЅРєС†РёРё СЃ РёР·РјРµРЅС‘РЅС‹РјРё РїР°СЂР°РјРµС‚СЂР°РјРё (СЂРµРєСѓСЂСЃРёСЏ)
 	}
 
 }
@@ -22,24 +22,24 @@ int main() {
 	setlocale(LC_ALL, "RU");
 
 	unsigned int num;
-	std::cout << "Введите число : ";
-	std::cin >> num; // ввод колличество выводимых чисел Фибоначчи
-	if (num > 0) { // проверка ввода положительного числа
-		if (num > 2) { // если число не первые 2
-			std::cout << "Числа Фибоначи : 0, 1, ";
-			numb_fibonachchi(num - 2, 0, 1); // вызов функции вывода чисел Фибоначчи
+	std::cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ : ";
+	std::cin >> num; // РІРІРѕРґ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР» Р¤РёР±РѕРЅР°С‡С‡Рё
+	if (num > 0) { // РїСЂРѕРІРµСЂРєР° С‡С‚Рѕ РІРІРµРґРёРЅРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ
+		if (num > 2) { // РµСЃР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР» Р±РѕР»СЊС€Рµ 2
+			std::cout << "Р§РёСЃР»Р° Р¤РёР±РѕРЅР°С‡С‡Рё : 0, 1, ";
+			numb_fibonachchi(num - 2, 0, 1); // РІС‹Р·РѕРІ РІСѓРЅРєС†РёРё РїРѕРґСЃС‡С‘С‚Р° Рё РІС‹РІРѕРґР° С‡РёСЃРµР» Р¤РёР±РѕРЅР°С‡С‡Рё
 			std::cout << '\n';
 		}
 		else {
-			switch (num) { // если число равно 1 или 2
-			case 1: std::cout << "Числа Фибоначи : 0 \n ";
+			switch (num) { // РµСЃР»Рё С‡РёСЃР»Рѕ 1 РёР»Рё 2
+			case 1: std::cout << "Р§РёСЃР»Р° Р¤РёР±РѕРЅР°С‡С‡Рё : 0 \n ";
 				break;
-			case 2: std::cout << "Числа Фибоначи : 0, 1 \n ";
+			case 2: std::cout << "Р§РёСЃР»Р° Р¤РёР±РѕРЅР°С‡С‡Рё : 0, 1 \n ";
 				break;
 			}
 		};
 	}
-	else std::cout << "Вы не ввели колличество чилел или оно равно 0 \n";
+	else std::cout << "Р§РёСЃР»Рѕ СЂР°РІРЅРѕ 0 РёР»Рё РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°. \n";
 	
 	return 0;
 }
