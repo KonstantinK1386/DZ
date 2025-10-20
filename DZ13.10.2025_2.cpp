@@ -15,7 +15,7 @@ void print_array(double* arr, int size) {
 	std::cout << '\n';
 }
 
-void main() {
+int main() {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	setlocale(LC_ALL, "RU");
@@ -23,6 +23,9 @@ void main() {
 	int size;
 	std::cout << "Введите размер массива : ";
 	std::cin >> size;
-	print_array(create_array(size), size);
+	double* arr = create_array(size);
+	print_array(arr, size);
+	free(arr);
 
+	return 0;
 }

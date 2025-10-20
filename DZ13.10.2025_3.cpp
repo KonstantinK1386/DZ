@@ -15,17 +15,22 @@ void delete_two_dim_array(int** arr, int rows, int cols); //принимает �
 //количество строк и столбцов в нём. Очищает полученный массив. Не возвращает ничего.
 
 
-void main() {
+int main() {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	setlocale(LC_ALL, "RU");
+
 	int rows, cols;
 	std::cout << "Введите количество строк : ";
 	std::cin >> rows;
 	std::cout << "Введите количество столбцов : ";
 	std::cin >> cols;
-	fill_tow_dim_array(create_two_dim_array(rows, cols), rows, cols);
-	
+	int** arr = create_two_dim_array(rows, cols);
+	fill_tow_dim_array(arr, rows, cols);
+	print_two_dim_array(arr, rows, cols);
+	delete_two_dim_array(arr, rows, cols); 
+
+	return 0;
 }
 
 int** create_two_dim_array(int rows, int cols) {
@@ -41,9 +46,7 @@ void fill_tow_dim_array(int** arr, int rows, int cols) {
 		for (int j = 0; j < cols; j++) {
 			arr[i][j] = (i + 1) * (j + 1);
 		}
-	}
-	print_two_dim_array(arr, rows, cols);
-	delete_two_dim_array(arr, rows, cols);
+	}	
 
 }
 
