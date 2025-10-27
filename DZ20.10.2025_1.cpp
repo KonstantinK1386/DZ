@@ -11,7 +11,7 @@ int main() {
 	std::string str;
 	std::ifstream fil("in.txt");
 	if (fil.is_open()) {
-		while (!(fil >> str).eof()) {
+		while (fil >> str) {
 			std::cout << str << '\n';
 		}
 	}
