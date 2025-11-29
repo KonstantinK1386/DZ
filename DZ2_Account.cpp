@@ -21,9 +21,8 @@ account input_accaunt() { // функция создания счёта
 	std::cin >> blank.account_balance;
 	return blank;
 }
-void changes_balance_account(account& blank) { // функция изменения баланса счёта
-	std::cout << "Ввведите новый баланс : ";
-	std::cin >> blank.account_balance;
+void changes_balance_account(account& blank, double new_balance) { // функция изменения баланса счёта
+	blank.account_balance = new_balance;
 }
 
 int main() {
@@ -31,9 +30,13 @@ int main() {
 	SetConsoleCP(1251);
 	setlocale(LC_ALL, "RU");
 
+	double new_balance;
+
 	account persons = input_accaunt(); //создание счёта
 	print_account(persons);  //вывод счёта
-	changes_balance_account(persons); // изменение баланса счёта
+	std::cout << "Ввведите новый баланс : ";
+	std::cin >> new_balance;
+	changes_balance_account(persons, new_balance); // изменение баланса счёта
 	print_account(persons); // вывод данных счёта
 
 	return 0;
