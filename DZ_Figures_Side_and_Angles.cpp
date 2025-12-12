@@ -4,13 +4,18 @@
 
 class Figures {
 protected:
+	std::string Name;
 	int NumbersSides;
 public:
 	Figures() {
 		NumbersSides = 0;
+		Name = "Фигура";
 	}
 	int get_NumbersSide() {
 		return NumbersSides;
+	}
+	std::string get_Name() {
+		return Name;
 	}
 };
 class Triangle : public Figures {// треугольник
@@ -30,6 +35,7 @@ public:
 		Angle_A = angle_A;
 		Angle_B = angle_B;
 		Angle_C = angle_C;
+		Name = "Треугольник ";
 	}
 	std::string get_Length_of_sides() { //возвращение длинны сторон
 		std::string LengthOfSsides = "Стороны : a= "+ std::to_string(Side_a) + " b= " + std::to_string(Side_b) + " c= " + std::to_string(Side_c);
@@ -61,6 +67,7 @@ public:
 		Angle_B = angle_B;
 		Angle_C = angle_C;
 		Angle_D = angle_D;
+		Name = "Четырёхугольник ";
 	}
 	std::string get_Length_of_sides() { // возврвщение длинны сторон
 		std::string LengthOfSsides = "Стороны : a= " + std::to_string(Side_a) + " b= " + std::to_string(Side_b) + " c= " + std::to_string(Side_c) + " d= " + std::to_string(Side_d);
@@ -74,43 +81,43 @@ public:
 class Right_Triangle : public Triangle {// прямоугольный треугольник
 public:
 	Right_Triangle(int side_a, int side_b, int side_c, int angle_A, int angle_B) : Triangle(side_a, side_b, side_c, angle_A, angle_B, 90) {// вызов конструктора треугольник
-
+		Name = "Прямоугольный треугольник ";
 	}
 };
 class Isosceles_Triangle : public Triangle {// равнобедренный треугольник
 public:
 	Isosceles_Triangle(int side_a, int side_b, int angle_A, int angle_B) : Triangle(side_a, side_b, side_a, angle_A, angle_B, angle_A) {// вызов конструктора треугольник
-
+		Name = "Равнобедренный треугольник ";
 	}
 };
 class Equilateral_Triangle : public Triangle {// равносторонний треугольник
 public:
 	Equilateral_Triangle(int side_a) : Triangle(side_a, side_a, side_a, 60, 60, 60) {// вызов конструктора треугольник
-
+		Name = "Равносторонний треугольник ";
 	}
 };
 class Parallelogramm : public Qadrangle {//пароллограмм
 public:
 	Parallelogramm(int side_a, int side_b, int angle_A, int angle_B) : Qadrangle(side_a, side_b, side_a, side_b, angle_A, angle_B, angle_A, angle_B) { // вызов конструктора четырёхугольник
-
+		Name = "Параллелограмм ";
 	}
 };
 class MyRectangle : public Parallelogramm {//прямоугольник
 public:
 	MyRectangle(int side_a, int side_b) : Parallelogramm(side_a, side_b, 90, 90) {//вызов конструктора пароллелограмм
-
+		Name = "Прямоугольник ";
 	}
 };
 class  Rhombus : public Parallelogramm {// ромб
 public:
 	Rhombus(int side_a, int angle_A, int angle_B) : Parallelogramm(side_a, side_a, angle_A, angle_B) { // вызов конструктора параллелограмм
-
+		Name = "Ромб ";
 	}
 };
 class Square : public MyRectangle { // квадрат
 public:
 	Square(int side_a) : MyRectangle(side_a, side_a) { // вызов конструктора прямоугольник
-
+		Name = "Квадрат ";
 	}
 };
 
@@ -128,39 +135,39 @@ int main() {
 	Parallelogramm parallelogramm(20, 30, 30,40);// объявление параллелограмм
 	Rhombus rhombus(30, 30, 40);// объявление ромб
 	MyRectangle rectangle(10, 20); //объявление прямоугольник
-	std::cout << "Треугольник : \n";
+	std::cout << triangle.get_Name() <<": \n";
 	std::cout << triangle.get_Length_of_sides() << '\n';
 	std::cout << triangle.get_Size_of_angles() << '\n';
 	std::cout << std::endl;
-	std::cout << "Прямоугольный треугольник : \n";
+	std::cout << right_triangle.get_Name() << ": \n";
 	std::cout << right_triangle.get_Length_of_sides() << '\n';
 	std::cout << right_triangle.get_Size_of_angles() << '\n';
 	std::cout << std::endl;
-	std::cout << "Равнобедренный треугольник : \n";
+	std::cout << isosceles_triangle.get_Name() << ": \n";
 	std::cout << isosceles_triangle.get_Length_of_sides() << '\n';
 	std::cout << isosceles_triangle.get_Size_of_angles() << '\n';
 	std::cout << std::endl;
-	std::cout << "Равносторонний треугольник : \n";
+	std::cout << eqilateral_triangle.get_Name() << ": \n";
 	std::cout << eqilateral_triangle.get_Length_of_sides() << '\n';
 	std::cout << eqilateral_triangle.get_Size_of_angles() << '\n';
 	std::cout << std::endl;
-	std::cout << "Четырёхугольник : \n";
+	std::cout << qadrangler.get_Name() << ": \n";
 	std::cout << qadrangler.get_Length_of_sides() << '\n';
 	std::cout << qadrangler.get_Size_of_angles() << '\n';
 	std::cout << std::endl;
-	std::cout << "Прямоугольник : \n";
+	std::cout << rectangle.get_Name() << ": \n";
 	std::cout << rectangle.get_Length_of_sides() << '\n';
 	std::cout << rectangle.get_Size_of_angles() << '\n';
 	std::cout << std::endl;
-	std::cout << "Квадрат : \n";
+	std::cout << square.get_Name() << ": \n";
 	std::cout << square.get_Length_of_sides() << '\n';
 	std::cout << square.get_Size_of_angles() << '\n';
 	std::cout << std::endl;
-	std::cout << "Параллелограмм : \n";
+	std::cout << parallelogramm.get_Name() << ": \n";
 	std::cout << parallelogramm.get_Length_of_sides() << '\n';
 	std::cout << parallelogramm.get_Size_of_angles() << '\n';
 	std::cout << std::endl;
-	std::cout << "Ромб : \n";
+	std::cout << rhombus.get_Name() << ": \n";
 	std::cout << rhombus.get_Length_of_sides() << '\n';
 	std::cout << rhombus.get_Size_of_angles() << '\n';
 	std::cout << std::endl;
