@@ -4,9 +4,7 @@
 #define MODE 1 
 
 #ifdef MODE
-double add(double a, double b) {
-	return a + b;
-}
+double add(double a, double b);
 int main() {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
@@ -14,6 +12,8 @@ int main() {
 
 #if MODE == 0
 	std::cout << "Работаю в режиме тренеровки. \n";
+	return 0;
+}
 #elif MODE == 1
 	std::cout << "Работаю в боевом режиме \n";
 	std::cout << "Введите число 1: ";
@@ -23,11 +23,17 @@ int main() {
 	double b;
 	std::cin >> b;
 	std::cout << "Результат сложения: " << add(a, b);
-#else
-	std::cout << "Неизвестный режим. Завершение работы. \n";
-#endif
 	return 0;
 }
+	double add(double a, double b) {
+		return a + b;
+	};
+#else
+	std::cout << "Неизвестный режим. Завершение работы. \n";
+	return 0;
+	}
+#endif
+	
 
 #endif // MODE
 
