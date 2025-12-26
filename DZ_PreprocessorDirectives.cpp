@@ -6,12 +6,12 @@
 #ifdef MODE
 
 
-#if MODE == 0
-int main(){
+#if MODE == 0 // усли MODE определено как 0 то выполняется этот код
+int main(){ 
 	std::cout << "Работаю в режиме тренеровки. \n";
 	return 1;
 }
-#elif MODE == 1
+#elif MODE == 1 //если MODE определено как 1 то выполняется этот код
 
 double add(double a, double b) {
 	return a + b;
@@ -33,7 +33,7 @@ int main() {
 }
 
 #else
-int main() {
+int main() { // если MODE определён но не является ни 0 ни 1 то выполняется этот код
 	std::cout << "Неизвестный режим. Завершение работы. \n";
 	return 404;
 }
@@ -42,6 +42,6 @@ int main() {
 
 #endif // MODE
 
-#ifndef MODE
+#ifndef MODE // Если MODE не определено то выводится ошибка
 #error MODE НЕ ОПРЕДЕЛЕНО
 #endif
