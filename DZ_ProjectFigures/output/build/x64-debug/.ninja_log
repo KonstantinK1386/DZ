@@ -1,0 +1,14 @@
+# ninja log v6
+19	2287	7905556973070895	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyIsosceles_Triangle.cpp.obj	940176e5dbc5d5c4
+29	2298	7905556973135976	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyQadrangle.cpp.obj	c4ac0569551e3abe
+32	2308	7905556973135976	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyParallelogramm.cpp.obj	2707e96b41c465ec
+23	2323	7905556973135976	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyExeptions.cpp.obj	c52a0bbd42153266
+39	2346	7905556973292246	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyRhombus.cpp.obj	c8c366f40f958f2b
+35	2355	7905556973135976	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyRectangle.cpp.obj	73539369f8f14db0
+25	2363	7905556973135976	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyEquilateral_Triangle.cpp.obj	5f21dd8df58b6a28
+12	2400	7905556972915023	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyFigures.cpp.obj	3c7ebe5575d809ca
+16	3019	7905556973070895	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyRight_Triangle.cpp.obj	a2d418099220743
+14	3058	7905556972915023	CMakeFiles/DZ_ProjectFigures.dir/Figures/MyTriangle.cpp.obj	79ed0fba85ad39d
+8	977	7905557575842629	CMakeFiles/DZ_ProjectFigures.dir/Figures/MySquare.cpp.obj	6e63316dcf92e965
+6	1483	7905557575761927	CMakeFiles/DZ_ProjectFigures.dir/DZ_ProjectFigures.cpp.obj	35db4fc4f4a8b6da
+1483	1747	7905557590537664	DZ_ProjectFigures.exe	962791a0c39bf04d
