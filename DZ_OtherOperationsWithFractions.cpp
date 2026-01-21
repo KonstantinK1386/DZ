@@ -31,22 +31,38 @@ public:
 		}
 		return *this;
 	}
-	Fraction operator+ (Fraction Input) { return Fraction((numerator_*Input.denominator_+Input.numerator_*denominator_),(denominator_*Input.denominator_)); }
-	Fraction operator- (Fraction Input) { return Fraction((numerator_ * Input.denominator_ - Input.numerator_ * denominator_), (denominator_ * Input.denominator_)); }
-	Fraction operator* (Fraction Input) { return Fraction((numerator_*Input.numerator_), (denominator_ * Input.denominator_)); }
-	Fraction operator/ (Fraction Input) { return Fraction((numerator_ * Input.denominator_), (denominator_ * Input.numerator_)); }
-	Fraction& operator++ () { numerator_ = numerator_ + denominator_; return *this; }
-	Fraction operator++ (int) { Fraction temp(*this); ++(*this); return temp; }
-	Fraction& operator-- () { numerator_ = numerator_ - denominator_; return *this; }
-	Fraction operator-- (int) { Fraction temp(*this); --(*this); return temp; }
+	Fraction operator+ (Fraction Input) { 
+		return Fraction((numerator_*Input.denominator_+Input.numerator_*denominator_),(denominator_*Input.denominator_)).NOD();
+		
+	}
+	Fraction operator- (Fraction Input) { 
+		return Fraction((numerator_ * Input.denominator_ - Input.numerator_ * denominator_), (denominator_ * Input.denominator_)).NOD();
+	}
+	Fraction operator* (Fraction Input) { 
+		return Fraction((numerator_*Input.numerator_), (denominator_ * Input.denominator_)).NOD();		 
+	}
+	Fraction operator/ (Fraction Input) { 
+		return Fraction((numerator_ * Input.denominator_), (denominator_ * Input.numerator_)).NOD();
+	}
+	Fraction& operator++ () {
+		numerator_ = numerator_ + denominator_;
+		return *this; 
+	}
+	Fraction operator++ (int) { 
+		Fraction temp(*this); 
+		++(*this); 
+		return temp; 
+	}
+	Fraction& operator-- () { 
+		numerator_ = numerator_ - denominator_; 
+		return *this; 
+	}
+	Fraction operator-- (int) { 
+		Fraction temp(*this); 
+		--(*this); 
+		return temp; }
 	
 	friend std::ostream& operator<< (std::ostream& output, Fraction& Input) { return (output<<Input.numerator_ << "/" << Input.denominator_); }
-	friend bool operator==(Fraction f1, Fraction f2) { return (f1.numerator_ * f2.denominator_) == (f2.numerator_ * f1.denominator_); }
-	friend bool operator!=(Fraction f1, Fraction f2) { return !(f1 == f2); }
-	friend bool operator<(Fraction f1, Fraction f2) { return (f1.numerator_ * f2.denominator_) < (f2.numerator_ * f1.denominator_); }
-	friend bool operator>(Fraction f1, Fraction f2) { return !(f1 < f2); }
-	friend bool operator<=(Fraction f1, Fraction f2) { return !(f1 >= f2); }
-	friend bool operator>=(Fraction f1, Fraction f2) { return !(f1 < f2); }
 
 };
 
@@ -67,24 +83,20 @@ int main(){
 	std::cin >> denominator;
 	Fraction f2(numerator, denominator);
 	Fraction Add = f1 + f2;
-	Add.NOD();
 	std::cout << f1 << " + " << f2 << " = " << Add << '\n';
 	Fraction Sub = f1 - f2;
-	Sub.NOD();
 	std::cout << f1 << " - " << f2 << " = " << Sub << '\n';
 	Fraction Mul = f1 * f2;
-	Mul.NOD();
 	std::cout << f1 << " * " << f2 << " = " << Mul << '\n';
 	Fraction Div = f1 / f2;
-	Div.NOD();
 	std::cout << f1 << " / " << f2 << " = " << Div << '\n';
+	std::cout << "++" << f1 << " * " << f2 << " = ";
 	Fraction Mul1 = ++f1 * f2;
-	Mul1.NOD();
-	std::cout << "++" << f1 << " * " << f2 << " = " << Mul1 << '\n';
+	std::cout << Mul1 << '\n';
 	std::cout << "Значение доби 1: " << f1 << "\n";
+	std::cout << f1 << "--" << " * " << f2 << " = ";
 	Fraction Mul2 = f1-- * f2;
-	Mul2.NOD();
-	std::cout << f1<<"--" << " * " << f2 << " = " << Mul2 << '\n';
+	std::cout << Mul2 << '\n';
 	std::cout << "Значение доби 1: " << f1 << "\n";
 
 	return 0;
